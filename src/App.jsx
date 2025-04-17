@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { nanoid } from "nanoid";
 
 import "./App.css";
 import Die from "./components/Die";
@@ -13,6 +14,7 @@ function App() {
       newDiceArray.push({
         value: roll,
         isHeld: false,
+        id: nanoid(),
       });
     }
     return newDiceArray;
@@ -23,7 +25,7 @@ function App() {
   }
 
   const diceElements = dice.map((dieObj, index) => (
-    <Die key={index} value={dieObj.value} />
+    <Die key={dieObj.id} value={dieObj.value} />
   ));
 
   return (
