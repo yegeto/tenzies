@@ -1,5 +1,9 @@
 import "./Die.css";
 
-export default function Die(props) {
-  return <button>{props.value}</button>;
+export default function Die({ value, isHeld, clickFunction }) {
+  return (
+    <button onClick={clickFunction} className={isHeld ? "held" : null}>
+      {value}
+    </button>
+  );
 }

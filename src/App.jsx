@@ -24,8 +24,24 @@ function App() {
     setDice(generateAllNewDice(10));
   }
 
-  const diceElements = dice.map((dieObj, index) => (
-    <Die key={dieObj.id} value={dieObj.value} />
+  function holdDice(id) {
+    setDice((prevDice) =>
+      prevDice.map((die) => {
+        if (die.id === id) {
+          return { ...die, isHeld: !die.isHeld };
+        }
+        return die;
+      })
+    );
+  }
+
+  const diceElements = dice.map((dieObj) => (
+    <Die
+      key={dieObj.id}
+      value={dieObj.value}
+      isHeld={dieObj.isHeld}
+      clickFunction={() => holdDice(dieObj.id)}
+    />
   ));
 
   return (

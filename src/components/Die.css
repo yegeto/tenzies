@@ -16,3 +16,7 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.dice-container button.held {
+  background-color: #59E391;
+}
