@@ -25,9 +25,13 @@ function App() {
   }
 
   function rollDice() {
-    setDice((prevDice) =>
-      prevDice.map((die) => (die.isHeld ? die : generateAllNewDice(1)[0]))
-    );
+    if (!gameWon) {
+      setDice((prevDice) =>
+        prevDice.map((die) => (die.isHeld ? die : generateAllNewDice(1)[0]))
+      );
+    } else {
+      setDice(generateAllNewDice(10));
+    }
   }
 
   function holdDice(id) {
