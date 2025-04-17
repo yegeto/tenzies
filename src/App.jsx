@@ -5,7 +5,7 @@ import "./App.css";
 import Die from "./components/Die";
 
 function App() {
-  const [dice, setDice] = useState(generateAllNewDice(10));
+  const [dice, setDice] = useState(() => generateAllNewDice(10));
 
   const gameWon =
     dice.every((die) => die.isHeld) &&
