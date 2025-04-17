@@ -27,7 +27,11 @@ function App() {
   function rollDice() {
     if (!gameWon) {
       setDice((prevDice) =>
-        prevDice.map((die) => (die.isHeld ? die : generateAllNewDice(1)[0]))
+        prevDice.map((die) =>
+          die.isHeld
+            ? die
+            : { ...die, value: Math.floor(Math.random() * 6) + 1 }
+        )
       );
     } else {
       setDice(generateAllNewDice(10));
