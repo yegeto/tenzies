@@ -21,7 +21,9 @@ function App() {
   }
 
   function rollDice() {
-    setDice(generateAllNewDice(10));
+    setDice((prevDice) =>
+      prevDice.map((die) => (die.isHeld ? die : generateAllNewDice(1)[0]))
+    );
   }
 
   function holdDice(id) {
