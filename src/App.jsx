@@ -10,7 +10,10 @@ function App() {
     const newDiceArray = [];
     for (let i = 0; i < diceAmount; i++) {
       const roll = Math.floor(Math.random() * 6) + 1;
-      newDiceArray.push(roll);
+      newDiceArray.push({
+        value: roll,
+        isHeld: false,
+      });
     }
     return newDiceArray;
   }
@@ -19,8 +22,8 @@ function App() {
     setDice(generateAllNewDice(10));
   }
 
-  const diceElements = dice.map((number, index) => (
-    <Die key={index} value={number} />
+  const diceElements = dice.map((dieObj, index) => (
+    <Die key={index} value={dieObj.value} />
   ));
 
   return (
