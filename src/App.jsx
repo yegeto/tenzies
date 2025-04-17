@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import "./App.css";
 import Die from "./components/Die";
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
     return newDiceArray;
   }
 
+  function rollDice() {
+    setDice(generateAllNewDice(10));
+  }
+
   const diceElements = dice.map((number, index) => (
     <Die key={index} value={number} />
   ));
@@ -21,6 +26,10 @@ function App() {
   return (
     <main>
       <section className="dice-container">{diceElements}</section>
+
+      <button className="roll-dice" onClick={rollDice}>
+        Roll
+      </button>
     </main>
   );
 }

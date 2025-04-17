@@ -20,13 +20,3 @@ div#root {
   max-height: 400px;
   max-width: 400px;
 }
-
-main {
-  background-color: #F5F5F5;
-  height: 100%;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
