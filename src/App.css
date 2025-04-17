@@ -8,6 +8,18 @@ main {
   align-items: center;
 }
 
+.title {
+  font-size: 40px;
+  margin: 0;
+}
+
+.instructions {
+  font-family: Karla, sans-serif;
+  font-weight: 400;
+  margin: 0 10px;
+  text-align: center;
+}
+
 .dice-container {
   display: grid;
   grid-template: auto auto / repeat(5, 1fr);
@@ -32,7 +44,9 @@ button {
 
 button.roll-dice {
   height: 50px;
-  width: 100px;
+  white-space: nowrap;
+  width: auto;
+  padding: 6px 21px;
   border: none;
   border-radius: 6px;
   background-color: #5035FF;
