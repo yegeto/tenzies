@@ -2,6 +2,9 @@
 
 A simple React-based dice game where the goal is to roll all dice to show the same number. This project was built as a learning exercise to practice React fundamentals and improve accessibility and UI behavior. Capstone Project of the Learn React Course on Scrimba.com
 
+The game is deployed and hosted on Netlify. You can check out the live demo here:
+[**Tenzies Game Live Demo**](https://tenzies-egeto.netlify.app/)
+
 ## ⚙️ Features
 
 - Roll 10 dice and hold specific ones to keep their values.
