@@ -5,9 +5,9 @@ export default function Die({ value, isHeld, clickFunction }) {
     <button
       onClick={clickFunction}
       className={isHeld ? "held" : null}
-      aria-pressed={props.isHeld}
-      aria-label={`Die with value ${props.value}, 
-            ${props.isHeld ? "held" : "not held"}`}
+      aria-pressed={isHeld}
+      aria-label={`Die with value ${value},
+            ${isHeld ? "held" : "not held"}`}
     >
       {value}
     </button>
